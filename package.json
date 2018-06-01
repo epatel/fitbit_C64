@@ -7,7 +7,6 @@
     "wipeColor": "#8bc34a",
     "requestedPermissions": [],
     "buildTargets": [
-      "higgs",
       "meson"
     ],
     "i18n": {

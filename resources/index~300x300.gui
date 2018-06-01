@@ -1,18 +1,11 @@
-<svg>
-
-  <rect x="0" y="0" width="100%" height="100%" fill="#352879" />
-
+<svg class="background">
   <g transform="scale(0.9,1)">
     <svg x="15" y="105">
-      <image id="separator" href="58.png" x="120" y="0" width="60" height="90" />
-      <image id="hours1" href="58.png" x="0" y="0" width="60" height="90" />
-      <image id="hours2" href="58.png" x="60" y="0" width="60" height="90" />
-      <image id="mins1" href="58.png" x="180" y="0" width="60" height="90" />
-      <image id="mins2" href="58.png" x="240" y="0" width="60" height="90" />
-      <rect x="0" y="89" width="100%" height="1" fill="#352879" />
+      <image id="separator" class="digit" href="58.png" x="120" y="0"/>
+      <image id="hours1" class="digit" href="58.png" x="0" y="0" />
+      <image id="hours2" class="digit" href="58.png" x="60" y="0" />
+      <image id="mins1" class="digit" href="58.png" x="180" y="0" />
+      <image id="mins2" class="digit" href="58.png" x="240" y="0" />
     </svg>
   </g>
-
-  
 </svg>
-<!-- 300x300 -->
