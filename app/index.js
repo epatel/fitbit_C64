@@ -1,22 +1,45 @@
+import { me } from "appbit";
 import clock from "clock";
 import document from "document";
+import * as util from "./utils";
 
-const separator = document.getElementById("separator"),
-    hours1 = document.getElementById("hours1"),
-    hours2 = document.getElementById("hours2"),
-    mins1 = document.getElementById("mins1"),
-    mins2 = document.getElementById("mins2");
+// TIME
+let separator = document.getElementById("separator");
+let hours1 = document.getElementById("hours1");
+let hours2 = document.getElementById("hours2");
+let mins1 = document.getElementById("mins1");
+let mins2 = document.getElementById("mins2");
 
 clock.granularity = "seconds";
 
 clock.ontick = evt => {
-  setHours(evt.date.getHours());
-  setMins(evt.date.getMinutes());
-  separator.style.display = (evt.date.getSeconds() % 2 === 0 ? "inline" : "none");
+  let d = evt.date;
+
+  // HOURS
+  let hours = d.getHours();
+  hours = util.zeroPad(hours);
+
+  setHours(hours);
+
+  // MINUTES
+  let minute = ("0" + d.getMinutes()).slice(-2);
+  setMins(minute);
+
+  // BLINK SEPARATOR
+  setSeparator(d.getSeconds());
+}
+
+// Blink time separator
+function setSeparator(val) {
+  separator.style.display = (val % 2 === 0 ? "inline" : "none");
 }
 
 function setHours(val) {
-  drawDigit(Math.floor(val / 10), hours1);
+  if (val > 9) {
+    drawDigit(Math.floor(val / 10), hours1);
+  } else {
+    drawDigit("", hours1);
+  }
   drawDigit(Math.floor(val % 10), hours2);
 }
 
