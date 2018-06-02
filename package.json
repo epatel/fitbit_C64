@@ -2,17 +2,16 @@
   "fitbit": {
     "appUUID": "14597052-b751-45b9-91f5-658aa8a0c44b",
     "appType": "clockface",
-    "appDisplayName": "C64",
+    "appDisplayName": "C64 fork",
     "iconFile": "resources/icon.png",
     "wipeColor": "#8bc34a",
     "requestedPermissions": [],
     "buildTargets": [
-      "higgs",
       "meson"
     ],
     "i18n": {
       "en": {
-        "name": "C64"
+        "name": "C64 fork"
       }
     }
   }
